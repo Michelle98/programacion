@@ -1,0 +1,17 @@
+// HolaMundo.cpp : Defines the entry point for the console application.
+//name: michelle alba luz mascheroni lopez
+// fecha: 20-08-16
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main ()
+{
+	cout<<"Hola Mundo \n";
+	cout<<"soy michelle mascheroni";
+	getch();
+	return 0;
+}
