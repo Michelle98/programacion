@@ -1,0 +1,25 @@
+// ejemplofor.cpp : Defines the entry point for the console application.
+//name: Michelle Mascheroni Lopez
+//fecha:08-10-16
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	int S,n;
+	// Valida que se ingresen datos correctos
+	do {
+		cout<<"Ingrese el numero de elementos a sumar en la serie: ";
+		cin>>n;
+	} while (n<=0 );
+	// inicializar el acumulador de suma
+	S=0;
+	for (int i=1;i<=n;i++)
+		S=S+i;
+	cout<<"La suma de la serie es: "<<S;
+	getch();
+}
