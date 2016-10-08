@@ -1,0 +1,30 @@
+// signos intercalados.cpp : Defines the entry point for the console application.
+//Name: Michelle Mascheroni Lopez
+//fecha:08-10-16
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main ()
+{
+	int S,n,a;
+	// Valida que se ingrese datos correctos.
+	do {
+		cout<<"Ingrese el valor de n: ";
+		cin>>n;
+	} while (n<=0);
+	//inicializar el acumulador de suma
+	S=0;
+	a=1;
+	cout<<"S=";
+	for (int i=2;i<=n;i=i+2)
+	{
+		cout<<i<<"+";
+		S=S+i*a;
+		a=a*(-1); // Esta operacion permite intercambiar signos
+	}
+	cout<<"La suma de la serie es: "<<S;
+	getch();
+}
