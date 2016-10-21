@@ -1,0 +1,45 @@
+// Sueldos.cpp : Defines the entry point for the console application.
+//michelle mascheroni lopez
+//20/10/16
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	float SN, SM, SB, IVA, AFP, Promedio, Mayor, MT;
+	int N, i;
+		IVA = 0.13 ;
+		AFP = 0.121;
+		SM = 1805;
+		cout<<"Ingresar N: ";
+		cin>>N;
+		Mayor= 0;
+		MT= 0;
+		for(int i=0;i<=N;i++) {
+			do {
+				cout<<"Ingresar el SB: ";
+				cin>>SB;
+			} while (SB<SM);
+			if ((SB>2*SM))
+				SN = SB-AFP*(SB)-IVA*(SM);
+			else
+				SN= SB-AFP*(SB);
+			MT= MT+SN;
+			if (SN>Mayor)
+				Mayor = SN;
+			cout<< "El salario neto es: " <<SN ;
+		}
+		Promedio = MT/N;
+		cout<< " El monto total es: " << MT;
+		cout<< "El promedio es : " <<Promedio;
+		cout<< " El mayor salario es: " <<Mayor;
+		getch();
+}
+
+
+		
+	
